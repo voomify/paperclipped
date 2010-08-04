@@ -7,6 +7,7 @@ This version of Paperclipped now requires Radiant 0.9.0 or higher. Just in case,
 
 Let me know if this works and if you run into any issues. 
 
+This Voomify Fork is for the multi-tenant Voomify hosting of Radiant.
 
 ###Installation
 
