@@ -175,7 +175,7 @@ class Asset < ActiveRecord::Base
                       :secret_access_key => Radiant::Config["assets.s3.secret"]
                     },
                     :s3_host_alias => Radiant::Config["assets.s3.host_alias"],
-                    :s3_headers => Radiant::Config["assets.s3.headers"],
+                    :s3_headers => ActiveSupport::JSON.decode(Radiant::Config["assets.s3.headers"]),
                     :bucket => Radiant::Config["assets.s3.bucket"],
                     :url => Radiant::Config["assets.url"] ? Radiant::Config["assets.url"] : "/:class/:id/:basename:no_original_style.:extension", 
                     :path => Radiant::Config["assets.path"] ? Radiant::Config["assets.path"] : ":rails_root/public/:class/:id/:basename:no_original_style.:extension"

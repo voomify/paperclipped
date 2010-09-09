@@ -20,7 +20,7 @@ class Admin::AssetsController < Admin::ResourceController
 
   def create
     @asset = Asset.new(params[:asset])
-    if @asset.save
+     if @asset.save
       if params[:page]
         @page = Page.find(params[:page])
         @asset.pages << @page
